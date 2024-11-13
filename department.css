@@ -1,0 +1,48 @@
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.all{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.first-container {
+  background-color: rgb(13, 13, 13);
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  transition: box-shadow 0.3s;
+  border-bottom: 2px solid white;
+}
+
+.back{
+  height: 75%;
+  width: 8%;
+  background-color: rgb(0, 0, 0);
+  transition: border-color 0.3s , box-shadow 0.3s;
+
+}
+.back:hover{
+  border-bottom: 2px solid white;
+  box-shadow:0px 4px 10px rgba(255, 255,255, 0.7);
+
+}
+.backbutton{
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+.fa-arrow-left{
+  font-size:30px;
+  color: white;
+  cursor: pointer;
+}
