@@ -1,20 +1,32 @@
-body{
-   margin: 0;
+/* Basic Reset */
+body {
+  margin: 0;
   padding: 0;
-font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Flex container that adjusts to full screen */
+.all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
-
+/* First container styles */
 .first-container {
   background-color: rgb(13, 13, 13);
   display: flex;
   flex-direction: row;
   justify-content: end;
-  height: 60px;
+  height: 8%;
   transition: box-shadow 0.3s;
   border-bottom: 2px solid white;
 }
+
+/* Info container styles */
 .info {
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -25,44 +37,38 @@ font-family: Arial, Helvetica, sans-serif;
   gap: 10px;
 }
 
+/* Second container styles */
 .second-container {
-  background-color: rgb(255, 68, 68);
+  background-color: rgb(0, 0, 0);
   height: 30%;
   display: flex;
   flex-direction: row;
 }
 
+/* Third container for larger sections */
 .third-container {
   background-color: rgb(0, 0, 0);
-
   justify-content: center;
   height: 75%;
   gap: 10px;
   color: white;
 }
 
+/* Buttons (contact, about) hover effects */
 .contact, .about {
   background-color: transparent;
   border: 0;
   height: 75%;
   width: 50%;
-  transition: border-color 0.3s , box-shadow 0.3s;
- 
-}
-.contact:hover, .about:hover {
-  border-bottom: 2px solid white;
-  box-shadow:0px 4px 10px rgba(255, 255,255, 0.7);
- 
-}
-.all {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.contact:hover, .about:hover {
+  border-bottom: 2px solid white;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Contact & About buttons */
 .contactbutton, .aboutbutton {
   height: 100%;
   width: 100%;
@@ -71,14 +77,16 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: transparent;
 }
 
+/* Phone and menu icons */
 .fa-phone, .fa-bars {
   color: rgb(244, 241, 241);
   height: 100%;
   width: 100%;
   padding-top: 15%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
+/* Logo styling */
 .logo {
   background-color: rgb(0, 0, 0);
   width: 20%;
@@ -88,10 +96,12 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
-  font-size: 75%; 
+  font-size: 75%;
   max-width: 75%;
-color: white; }
+  color: white;
+}
 
+/* Name section in the layout */
 .name {
   background-color: rgb(0, 0, 0);
   width: 40%;
@@ -99,6 +109,7 @@ color: white; }
   flex-direction: column;
 }
 
+/* Search bar section */
 .search-bar {
   background-color: rgb(0, 0, 0);
   width: 40%;
@@ -113,8 +124,9 @@ input {
   border: 0;
   transition: box-shadow 0.3s;
 }
-input:hover{
-  box-shadow:0px 10px 20px rgba(255, 255,255, 0.7);
+
+input:hover {
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.7);
 }
 
 .search-button {
@@ -132,6 +144,7 @@ input::placeholder {
   font-size: larger;
 }
 
+/* Book and Club titles */
 .book {
   color: gold;
   font-weight: bolder;
@@ -147,22 +160,18 @@ input::placeholder {
   margin: 0;
 }
 
+/* Bookclub flex layout */
 .bookclub {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-p{
+
+p {
   color: white;
 }
 
-.container {
-  width: 200px;
-  border: 1px solid #000;
-  overflow: hidden;
-}
-
-
+/* Department list */
 .department {
   padding: 10px;
   padding-top: 20px;
@@ -172,18 +181,17 @@ p{
   border-bottom: 1px solid #ffff00;
   position: sticky;
   top: 0;
-  font-size:25px;
+  font-size: 150%;
   height: 15%;
   max-width: 75%;
+  color: #ffff00;
 }
 
-
 .list {
-  max-height:200px; 
+  max-height: 200px;
   overflow-y: auto;
   max-width: 75%;
 }
-
 
 .item {
   padding: 10px;
@@ -194,13 +202,102 @@ p{
 .item:last-child {
   border-bottom: none;
 }
-.list::-webkit-scrollbar{
+
+.list::-webkit-scrollbar {
   background: #000000;
 }
-.list::-webkit-scrollbar-track{
+
+.list::-webkit-scrollbar-track {
   background: #ffffff;
   border-radius: 5px;
 }
-.list::-webkit-scrollbar-thumb{
+
+.list::-webkit-scrollbar-thumb {
   background: #ffff00;
+}
+
+/* Media Queries for responsiveness */
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  .first-container {
+    flex-direction: column;
+    height: 10%;
+  }
+
+  .info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .second-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .third-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .bookclub {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  .first-container {
+    flex-direction: row;
+    height: 8%;
+  }
+
+  .second-container {
+    height: auto;
+  }
+
+  .third-container {
+    flex-direction: row;
+  }
+
+  .search-bar {
+    width: 60%;
+  }
+
+  .bookclub {
+    flex-direction: row;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+  .first-container {
+    height: 8%;
+  }
+
+  .second-container {
+    height: 30%;
+  }
+
+  .third-container {
+    height: 75%;
+  }
+
+  .search-bar {
+    width: 40%;
+  }
+
+  .bookclub {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

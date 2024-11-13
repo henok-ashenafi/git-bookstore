@@ -39,14 +39,17 @@ function addtodepartments() {
     console.error("third-container not found");
   }
 }
-
+// In your main JS file (e.g., book-homepage.js)
 function gotodepartmentpage() {
   const itemElements = document.querySelectorAll('.item');
 
   itemElements.forEach((item) => {
     item.addEventListener('click', (event) => {
-      const departmentName = event.target.textContent.replace(/\s+/g, '-').toLowerCase();
+      const selecteddepartment = event.target.textContent;
+      localStorage.setItem("selectedDepartment", selecteddepartment); // Store in localStorage
+      const departmentName = selecteddepartment.replace(/\s+/g, '-').toLowerCase();
       window.location.href = `department.html?department=${departmentName}`;
     });
   });
 }
+

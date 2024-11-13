@@ -17,7 +17,7 @@ body{
   background-color: rgb(13, 13, 13);
   display: flex;
   flex-direction: row;
-  height: 60px;
+  height:8%;
   transition: box-shadow 0.3s;
   border-bottom: 2px solid white;
 }
