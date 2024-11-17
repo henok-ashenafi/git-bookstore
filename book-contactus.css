@@ -1,4 +1,5 @@
-body{
+
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -7,102 +8,219 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.all{
+
+.all {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
+
+
 .first-container {
   background-color: rgb(13, 13, 13);
   display: flex;
   flex-direction: row;
-  height:8%;
+  height: 8%;
   transition: box-shadow 0.3s;
   border-bottom: 2px solid white;
 }
 
-.back{
+.back {
   height: 75%;
   width: 8%;
   background-color: rgb(0, 0, 0);
-  transition: border-color 0.3s , box-shadow 0.3s;
-
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
-.back:hover{
+
+.back:hover {
   border-bottom: 2px solid white;
-  box-shadow:0px 4px 10px rgba(255, 255,255, 0.7);
-
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.7);
 }
-.backbutton{
+
+.backbutton {
   height: 100%;
   width: 100%;
   border: 0;
   background: transparent;
 }
-.fa-arrow-left{
-  font-size:25px;
+
+.fa-arrow-left {
+  font-size: 25px;
   color: white;
   cursor: pointer;
 }
-.second-container{
+
+
+.second-container {
   display: flex;
   flex-direction: row;
   background-color: rgb(0, 0, 0);
   justify-content: space-between;
-  height:80%;
+  height: 80%;
+  padding: 0 5vw;
 }
 
 
-.third-container{
+.third-container {
   background-color: rgb(0, 0, 0);
   height: 10%;
-  color: white;
-  font-size: 6vh;
+  color: gold;
+  font-size: 150%;
   padding-top: 4vh;
 }
-.phone{
-  background-color: rgb(0, 0, 0);
-  width: 33vw;
-  transition: border-color 0.3s , box-shadow 0.3s;
-}
-.telegram{
-  background-color: rgb(0, 0, 0);
-  width: 33vw;
-  transition: border-color 0.3s , box-shadow 0.3s;
-}
-.email{
-  background-color: rgb(0, 0, 0);
-  width: 33vw;
-  transition: border-color 0.3s , box-shadow 0.3s;
-}
 
 
-.phone:hover,.telegram:hover,.email:hover{
+.phone, .telegram, .email {
+  background-color: rgb(0, 0, 0);
+  width: 33vw;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.phone:hover, .telegram:hover, .email:hover {
   border-bottom: 2px solid white;
-  box-shadow:0px 10px 20px rgba(255, 242, 0, 0.791);
-
+  box-shadow: 0px 10px 20px rgba(255, 242, 0, 0.791);
 }
-.icon{
+
+.icon {
   background-color: rgb(0, 0, 0);
-  height:60%;
+  height: 60%;
   justify-content: end;
   align-items: center;
 }
-.imageicon{
-  height:30%;
-  width:26%;
+
+
+.imageicon {
+  height: 30%;
+  width: 26%;
   padding-left: 35%;
   padding-top: 26%;
 }
-.text{
+
+
+.text {
   color: white;
   padding-left: 35%;
   background-color: black;
-  font-size:120%;
+  font-size: 120%;
 }
-a{
+
+
+a {
   color: white;
   height: 100%;
   width: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+
+  .first-container {
+    flex-direction: column;
+    height: 10%;
+  }
+
+
+  .second-container {
+    flex-direction: column;
+    height: 80%;
+    width: 100vw;
+  }
+
+
+  .phone, .telegram, .email {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+
+  .third-container {
+    font-size: 5vh;
+  }
+
+
+  .imageicon {
+    height: 30%;
+    width: 30%;
+    padding-left: 40%;
+    padding-top: 40%;
+  }
+
+
+  .text {
+    font-size: 100%;
+    padding-left: 30%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .first-container {
+    height: 10%;
+  }
+
+  .second-container {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+
+  .third-container {
+    font-size: 5vh;
+  }
+
+
+  .imageicon {
+    height: 25%;
+    width: 25%;
+    padding-left: 35%;
+    padding-top: 35%;
+  }
+
+  .text {
+    font-size: 110%;
+    padding-left: 32%;
+  }
+
+  .phone, .telegram, .email {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+
+  .first-container {
+    height: 8%;
+  }
+
+  .second-container {
+    width: 70vw;
+    margin-left: 3vw;
+  }
+
+ 
+  .third-container {
+    font-size: 6vh;
+  }
+
+
+  .imageicon {
+    height: 30%;
+    width: 26%;
+    padding-left: 35%;
+    padding-top: 26%;
+  }
+
+
+  .text {
+    font-size: 120%;
+    padding-left: 35%;
+  }
+
+  .phone, .telegram, .email {
+    width: 33vw;
+  }
 }

@@ -1,11 +1,10 @@
-/* Basic Reset */
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Flex container that adjusts to full screen */
 .all {
   display: flex;
   flex-direction: column;
@@ -15,18 +14,17 @@ body {
   position: absolute;
 }
 
-/* First container styles */
 .first-container {
   background-color: rgb(13, 13, 13);
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content:end;
   height: 8%;
+
   transition: box-shadow 0.3s;
   border-bottom: 2px solid white;
 }
 
-/* Info container styles */
 .info {
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -37,15 +35,14 @@ body {
   gap: 10px;
 }
 
-/* Second container styles */
 .second-container {
+
   background-color: rgb(0, 0, 0);
   height: 30%;
   display: flex;
   flex-direction: row;
 }
 
-/* Third container for larger sections */
 .third-container {
   background-color: rgb(0, 0, 0);
   justify-content: center;
@@ -54,7 +51,6 @@ body {
   color: white;
 }
 
-/* Buttons (contact, about) hover effects */
 .contact, .about {
   background-color: transparent;
   border: 0;
@@ -64,29 +60,28 @@ body {
 }
 
 .contact:hover, .about:hover {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.7);
 }
 
-/* Contact & About buttons */
 .contactbutton, .aboutbutton {
   height: 100%;
   width: 100%;
   padding: 0;
   border: 0;
   background-color: transparent;
+  bottom: 30px;
 }
 
-/* Phone and menu icons */
 .fa-phone, .fa-bars {
   color: rgb(244, 241, 241);
   height: 100%;
   width: 100%;
   padding-top: 15%;
   cursor: pointer;
+  color: white;
 }
 
-/* Logo styling */
 .logo {
   background-color: rgb(0, 0, 0);
   width: 20%;
@@ -101,7 +96,6 @@ img {
   color: white;
 }
 
-/* Name section in the layout */
 .name {
   background-color: rgb(0, 0, 0);
   width: 40%;
@@ -109,46 +103,52 @@ img {
   flex-direction: column;
 }
 
-/* Search bar section */
 .search-bar {
-  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
   width: 40%;
-}
-
-input {
-  height: 25%;
-  width: 80%;
-  margin-top: 10%;
-  margin-left: 5%;
+  position: relative;
+  background-color: rgb(0, 0, 0);
   border-radius: 25px;
-  border: 0;
-  transition: box-shadow 0.3s;
+  padding: 5px 15px;
 }
 
-input:hover {
+.search-bar input {
+  height: 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 10px 40px 10px 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: larger;
+  transition: box-shadow 0.3s;
+  border: 2px solid white;
+}
+
+.search-bar input:hover {
   box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.7);
 }
 
-.search-button {
-  height: 25%;
-  width: 15%;
-  margin-top: 10%;
-  margin-left: -17%;
-  border: 0;
-  background-color: transparent;
-}
-
-input::placeholder {
+.search-bar input::placeholder {
   color: grey;
-  padding-left: 10%;
-  font-size: larger;
 }
 
-/* Book and Club titles */
+
+.search-button {
+  position: absolute;
+  right: 30px; 
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+
 .book {
   color: gold;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 200%;
   padding-left: 0;
   margin: 0;
 }
@@ -156,11 +156,10 @@ input::placeholder {
 .club {
   color: white;
   padding-left: 2%;
-  font-size: 50px;
+  font-size: 200;
   margin: 0;
 }
 
-/* Bookclub flex layout */
 .bookclub {
   display: flex;
   flex-direction: row;
@@ -171,20 +170,20 @@ p {
   color: white;
 }
 
-/* Department list */
+
 .department {
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 0;
   background-color: #000000;
   font-weight: bold;
-  border-bottom: 1px solid #ffff00;
+  border-bottom: 1px solid gold;
   position: sticky;
   top: 0;
   font-size: 150%;
   height: 15%;
   max-width: 75%;
-  color: #ffff00;
+  color: gold;
 }
 
 .list {
@@ -195,7 +194,7 @@ p {
 
 .item {
   padding: 10px;
-  border-bottom: 1px solid #ffff00;
+  border-bottom: 1px solid gold;
   cursor: pointer;
 }
 
@@ -213,12 +212,10 @@ p {
 }
 
 .list::-webkit-scrollbar-thumb {
-  background: #ffff00;
+  background:gold;
 }
 
-/* Media Queries for responsiveness */
 
-/* For small screens (mobile devices) */
 @media (max-width: 767px) {
   .first-container {
     flex-direction: column;
@@ -254,7 +251,7 @@ p {
   }
 }
 
-/* For tablets and medium screens */
+
 @media (max-width: 1024px) {
   .first-container {
     flex-direction: row;
@@ -278,7 +275,7 @@ p {
   }
 }
 
-/* For large screens (desktops) */
+
 @media (min-width: 1025px) {
   .first-container {
     height: 8%;

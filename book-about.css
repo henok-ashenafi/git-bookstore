@@ -1,4 +1,5 @@
-body{
+
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -7,81 +8,222 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.all{
+
+.all {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
+
+
 .first-container {
   background-color: rgb(13, 13, 13);
   display: flex;
   flex-direction: row;
-  height:8%;
+  height: 8%;
   transition: box-shadow 0.3s;
   border-bottom: 2px solid white;
 }
 
-.back{
+
+.back {
   height: 75%;
   width: 8%;
   background-color: rgb(0, 0, 0);
-  transition: border-color 0.3s , box-shadow 0.3s;
-
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
-.back:hover{
+
+.back:hover {
   border-bottom: 2px solid white;
-  box-shadow:0px 4px 10px rgba(255, 255,255, 0.7);
-
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.7);
 }
-.backbutton{
+
+.backbutton {
   height: 100%;
   width: 100%;
   border: 0;
   background: transparent;
 }
-.fa-arrow-left{
-  font-size:30px;
+
+
+.fa-arrow-left {
+  font-size: 30px;
   color: white;
   cursor: pointer;
 }
-.second-container{
+
+
+.second-container {
   background-color: rgb(0, 0, 0);
-  height: 90hv;
- margin-left:3vw;
- padding-left: 2vw;
- width: 70vw;
- transition: box-shadow 0.3s border-color 0.3s;
+  height:100%;
+  margin-left: 3vw;
+  padding-left: 2vw;
+  width: 70vw;
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
-.second-container:hover{
-  border-bottom: 2px solid white;
-  box-shadow:0px 4px 10px rgba(255, 255,255, 0.7);
+
+.second-container:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.7);
 }
-h1,h3,h4{
+
+
+h1, h3, h4 {
   color: gold;
 }
-p{
-  color:white;
+
+p {
+  color: white;
 }
-li::marker{
+
+li::marker {
   color: gold;
 }
-.secondthird{
+
+.secondthird {
   display: flex;
   flex-direction: row;
   gap: 0;
   padding: 0;
   margin: 0;
+  height: 1500px;
 }
-.third-container{
+
+.third-container {
   background-color: rgb(0, 0, 0);
   height: 20vh;
-width:20vw;
+  width: 20vw;
 }
-img{
+
+
+img {
   height: 100%;
   width: 100%;
+}
+
+.club {
+  color: white;
+}
+
+
+@media (max-width: 767px) {
+  .first-container {
+    flex-direction: column;
+    height: 10%;
   }
-  .club{
-    color: white;
+  .input{
+ height: 100%;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 5%;
+    border-radius: 25px;
+    border: 0;
+    transition: box-shadow 0.3s;
+}
+
   }
+
+  .search-bar{
+    padding: 0;
+  }
+  .second-container {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .third-container {
+    width: 100%;
+    height: 15vh;
+  }
+
+  .secondthird {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1, h3, h4 {
+    font-size: 120%;
+  }
+
+  .club {
+    font-size: 18px;
+  }
+
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+
+
+
+@media (max-width: 1024px) {
+  .first-container {
+    flex-direction: row;
+    height: 8%;
+  }
+
+  .second-container {
+    width: 80vw;
+    margin-left: 5vw;
+  }
+
+  .third-container {
+    width: 25vw;
+    height: 25vh;
+  }
+
+  .secondthird {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  h1, h3, h4 {
+    font-size: 130%;
+  }
+
+  .club {
+    font-size: 20px;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .first-container {
+    height: 8%;
+  }
+
+  .second-container {
+    width: 70vw;
+    margin-left: 3vw;
+  }
+
+  .third-container {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  .secondthird {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  h1, h3, h4 {
+    font-size: 150%;
+  }
+
+  .club {
+    font-size: 24px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
